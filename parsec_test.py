@@ -7,11 +7,13 @@ if __name__=='__main__':
 
     try:
         p = parsec.Parsec(server_IP, parsec_IP)
+
+        p.connect()
+        
         version=p.get_version()
         print('Version received, connected')
         print(version)
-
-        p.connect()
+        
         p.clear_transaction()
 
         while True:
